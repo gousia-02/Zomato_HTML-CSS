@@ -1,20 +1,15 @@
-                * {
+            * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                /* To Box Model */
             }
-            /*Globak*/
+            /* Global */
             
             body {
-                font-family: "Baloo 2", sanserif;
+                font-family: "Baloo 2", sans-serif;
                 background-color: #ebf2ff;
                 overflow-x: hidden;
-            }
-            
-            .navbar {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
             }
             
             .button__primary {
@@ -30,6 +25,12 @@
                 width: 100%;
                 margin: 0 auto;
                 padding: 0 15px;
+            }
+            
+            .navbar {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
             }
             
             .navbar__brand {
@@ -57,8 +58,41 @@
                 color: #1d3557;
                 margin: 20px 0;
             }
+            /* Menu Styles */
             
-            @media (min-width:768px) {
+            .explore__menu__container {
+                margin-top: 50px;
+            }
+            
+            .explore__menu__text {
+                font-size: 30px;
+                color: #1d3557;
+                margin: 20px 0;
+                text-align: center;
+            }
+            
+            .food__menu__card {
+                width: 100%;
+                background-color: #fff;
+                border-radius: 8px;
+                margin-bottom: 15px;
+            }
+            
+            .food__image {
+                width: 100%;
+                border-radius: 8px 8px 0 0;
+            }
+            
+            .food__menu__card__description {
+                padding: 20px;
+            }
+            
+            .explore__menu__view__more {
+                display: flex;
+                justify-content: center;
+            }
+            
+            @media (min-width: 768px) {
                 .navbar {
                     justify-content: space-between;
                     padding: 10px 20px;
@@ -75,28 +109,40 @@
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: space-between;
-                    gap: 10px
+                    gap: 10px;
                 }
-            }
-            
-            @media (min-width: 768px) {
-                .navbar {
-                    justify-content: space-between;
-                    padding: 10px 20px;
+                .explore__menu__container {
+                    position: relative;
                 }
-                .navbar__brand {
-                    width: 150px;
+                .explore__menu__gradient__bg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-image: linear-gradient( to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+                    z-index: -3;
+                    transform: skewY(-5deg);
                 }
-                .button__primary {
-                    padding: 20px;
-                    font-size: 20px;
-                }
-                .hero__container {
+                .explore__menu__lists {
+                    margin-top: 50px;
                     display: flex;
-                    flex-direction: row-reverse;
+                    gap: 8px;
+                }
+                #pizza__card {
+                    margin-top: -20px;
+                    margin-bottom: 30px;
+                }
+                .restaurants__description {
+                    font-size: 40px;
+                    width: 100%;
+                }
+                .restaurants__container {
+                    display: flex;
                     align-items: center;
-                    justify-content: space-between;
-                    gap: 10px
+                }
+                .restaurants__flex {
+                    width: 100%;
                 }
             }
             
@@ -107,8 +153,20 @@
                 .hero__text {
                     font-size: 50px;
                 }
-                @media (min-width:1400px) {
-                    .container {
-                        max-width: 1250px;
-                    }
+                .explore__menu__lists {
+                    gap: 20px;
+                    padding: 0 20px;
                 }
+                .explore__menu__text {
+                    font-size: 50px;
+                }
+                .restaurants__container {
+                    margin-top: 30px;
+                }
+            }
+            
+            @media (min-width: 1400px) {
+                .container {
+                    max-width: 1250px;
+                }
+            }
